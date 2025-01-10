@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="/css/global.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Booking</h1>
+        <div>Logged in as Guest</div>
+        <nav>
+            <ul>
+                <li><a href="/hotels/hotels">Home</a></li>
+                <li><a href="/bookings/mybookings/guest">My Bookings</a></li>
+                {{!-- <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li> --}}
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content will be injected here -->
+    {{{body}}}
+
+    <footer>
+        <p>&copy; 2025 Hotel Room Booking. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/global.js"></script>
+</body>
+</html>

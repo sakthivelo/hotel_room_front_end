@@ -1,0 +1,34 @@
+<div>
+    <h1 class="bookingTitle" >{{title}}</h1>
+    <div class="form-container">
+        {{#if data.rooms}}
+            {{#each data.rooms}}
+            <div class="divStyle">
+                <h2>Booking Details</h2>
+                <div> 
+                    Hotel : {{hotelId}}
+                </div>
+                <div>
+                    Check In Date : {{checkInDate}}
+                </div>
+                <div>
+                    Check Out Date : {{checkOutDate}}
+                </div>
+                <div>
+                    Number of rooms : {{numberOfRooms}}
+                </div>
+                <div>
+                    Status : {{status}}
+                </div>                
+                <div>                    
+                    <button name="edit" onClick="window.location.href='/bookings/editBooking/{{_id}}'" {{#ifEquals status 'Cancelled'}} disabled{{/ifEquals}}>Edit</button>                    
+                    <button name="delete" onClick="window.location.href='/bookings/cancelBooking/{{_id}}'" {{#ifEquals status 'Cancelled'}} disabled{{/ifEquals}}>Cancel</button>
+                </div>
+                <hr>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="message error">No records  found!</div>
+        {{/if}}
+    </div>
+</div>

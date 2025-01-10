@@ -1,0 +1,16 @@
+{{#if hotels}}
+        {{#each hotels}}
+            <div class="hotel-card">
+                <h3>{{name}}</h3>
+                <div>{{location}}</div>
+                <div>Total rooms: {{rooms}}</div>
+                <div>Available rooms: {{availableRooms}}</div>
+                {{#if availableRooms}}
+                    <div><button name="book" onClick="window.location.href='/bookings/book/{{_id}}'">Book</button></div>
+                {{/if}}
+                
+            </div>
+        {{/each}}
+    {{else}}
+        <div class="message error">No records found!</div>
+    {{/if}}

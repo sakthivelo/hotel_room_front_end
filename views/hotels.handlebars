@@ -1,0 +1,14 @@
+   <div class="filter-container">
+        <label for="locationnFilter">Filter by Location:</label>
+        <select name="locationnFilter" onchange="filterHotels(this.value)">
+            <option>--Select--</option>
+            <option>Chennai</option>
+            <option>Bangalore</option>
+            <option>Coimbatore</option>
+            <option>Hyderabad</option>
+        </select>
+    </div>
+<div id="hotelList">
+    {{> hotelListPartial hotels=hotels}}
+</div>
+<div style="clear:both;"></div>

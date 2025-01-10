@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #466c96;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header div {
+    font-size: 14px;
+    color: #C0C0C0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e2e6ea;
+}
+
+/* Filter Dropdown */
+.filter-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.filter-container select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Hotel List Container */
+#hotelList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Individual Hotel Card */
+.hotel-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+}
+
+.hotel-card h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #007BFF;
+}
+
+.hotel-card div {
+    margin-bottom: 10px;
+}
+
+.hotel-card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hotel-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Error and Success Messages */
+.message {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.message.success {
+    color: green;
+    background-color: #d4edda;
+}
+
+.message.error {
+    color: red;
+    background-color: #f8d7da;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hotelList {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hotel-card {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.booking-card {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #C0C0C0;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-card h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.booking-card h5 {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.booking-card h5.green {
+    color: green;
+}
+
+.booking-card h5.red {
+    color: red;
+}
+
+.booking-details {
+    margin-bottom: 20px;
+}
+
+.booking-details div {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.booking-form {
+    margin-top: 20px;
+}
+
+.booking-form div {
+    margin-bottom: 15px;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.booking-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #0056b3;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Div for each room */
+.divStyle {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.divStyle h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styles for booking details */
+.divStyle div {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+.divStyle div span {
+    font-weight: bold;
+}
+
+.bookingTitle {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}

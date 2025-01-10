@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="booking-card">
+    <h2>Book your room</h2>
+    <h5 class="green">{{msg}}</h5>
+    <h5 class="red">{{errMsg}}</h5>
+    <div class="booking-details">
+        <div >Hotel: {{data.hotelDetials.name}}</div>
+        <div >Total Rooms: {{data.hotelDetials.rooms}}</div>
+        <div >Available Rooms: {{data.hotelDetials.availableRooms}}</div>
+    </div>
+    <form class="booking-form" name="roomForm" method="POST" action="/bookings/{{action}}" >
+        <div>
+            <label for="numberOfRooms">Number of rooms</label>
+            <input type="text" name="numberOfRooms" id="numberOfRooms" value="{{data.bookingDetails.numberOfRooms}}" />
+        </div>
+        <div>
+            <label for="checkInDate">Check in Date</label>
+            <input type="datetime-local" name="checkInDate" id="checkInDate" value="{{data.bookingDetails.checkInDate}}"/>
+        </div>
+        <div >
+            <label for="checkOutDate">Check out Date</label>
+            <input type="datetime-local" name="checkOutDate" id="checkOutDate" value="{{data.bookingDetails.checkOutDate}}"/>
+        </div>
+       {{#if hotelId}} <input type="hidden" name="hotelId" id="hotelId" value="{{hotelId}}" class="hidden-input"/>{{/if}}
+       {{#if data.bookingDetails._id}} <input type="hidden" name="roomId" id="roomId" value="{{data.bookingDetails._id}}" class="hidden-input"/>{{/if}}
+        <div style="text-align:center">
+            <button type="submit" name="Book" value="Book">Book</button> 
+        </div>       
+    </form>
+</div>
+</div>
